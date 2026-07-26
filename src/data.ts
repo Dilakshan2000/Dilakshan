@@ -1,15 +1,22 @@
 import { Project, Skill, Education, ProcessStep } from "./types";
+import portraitImage from "./assets/images/Dilakshan.png";
+import bikeImage from "./assets/images/veloce_bike_1784050017435.jpg";
+import chairImage from "./assets/images/woodcraft_chair_1784050026942.jpg";
+import fashionImage from "./assets/images/urbanic_fashion_1784050036008.jpg";
+import workspaceImage from "./assets/images/workspace_mockup_1784050046274.jpg";
+import oziLicenceImage from "./assets/images/ozi_licence_preview.png";
+import lifelankaTravelsImage from "./assets/images/lifelanka_travels_preview.png";
+import agroMindImage from "./assets/images/agro_mind_preview.png";
 
-// Note: Using the exact paths of the generated images
 export const IMAGES = {
-  portrait: "/src/assets/images/Dilakshan.png",
-  bike: "/src/assets/images/veloce_bike_1784050017435.jpg",
-  chair: "/src/assets/images/woodcraft_chair_1784050026942.jpg",
-  fashion: "/src/assets/images/urbanic_fashion_1784050036008.jpg",
-  workspace: "/src/assets/images/workspace_mockup_1784050046274.jpg",
-  oziLicence: "/src/assets/images/ozi_licence_preview.png",
-  lifelankaTravels: "/src/assets/images/lifelanka_travels_preview.png",
-  agroMind: "/src/assets/images/agro_mind_preview.png",
+  portrait: portraitImage,
+  bike: bikeImage,
+  chair: chairImage,
+  fashion: fashionImage,
+  workspace: workspaceImage,
+  oziLicence: oziLicenceImage,
+  lifelankaTravels: lifelankaTravelsImage,
+  agroMind: agroMindImage,
 };
 
 export const PROJECTS: Project[] = [
