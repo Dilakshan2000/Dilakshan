@@ -50,7 +50,7 @@ const CERT_CARDS = [
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-400",
     className:
-      "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-[#0a0a0a]/60 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+      "sm:[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-[#0a0a0a]/60 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
   {
     icon: <Shield className="size-4 text-purple-300" />,
@@ -60,7 +60,7 @@ const CERT_CARDS = [
     iconClassName: "text-purple-500",
     titleClassName: "text-purple-400",
     className:
-      "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-[#0a0a0a]/60 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+      "sm:[grid-area:stack] sm:translate-x-16 sm:translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-[#0a0a0a]/60 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
   {
     icon: <BadgeCheck className="size-4 text-emerald-300" />,
@@ -70,7 +70,7 @@ const CERT_CARDS = [
     iconClassName: "text-emerald-500",
     titleClassName: "text-emerald-400",
     className:
-      "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
+      "sm:[grid-area:stack] sm:translate-x-32 sm:translate-y-20 hover:translate-y-10",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function GearGrid() {
               </div>
 
               {/* Cards stack — padded so the offset cards don't clip */}
-              <div className="w-full flex items-start justify-center lg:justify-start pl-0 lg:pl-6 pt-4 pb-20">
+              <div className="w-full flex items-start justify-center lg:justify-start pl-0 lg:pl-6 pt-4 pb-6 sm:pb-20">
                 <DisplayCards
                   cards={CERT_CARDS}
                   onCardClick={handleCardClick}

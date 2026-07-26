@@ -57,7 +57,7 @@ export default function HeroSection() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-        className="absolute top-[4%] right-[4%] lg:top-[18%] lg:right-[4%] w-16 h-16 lg:w-20 lg:h-20 z-10 pointer-events-none select-none"
+        className="hidden sm:block absolute top-[14%] right-[4%] lg:top-[18%] lg:right-[4%] w-14 h-14 lg:w-20 lg:h-20 z-10 pointer-events-none select-none opacity-60 lg:opacity-100"
       >
         <svg viewBox="0 0 80 80" className="w-full h-full">
           <defs>
@@ -75,25 +75,25 @@ export default function HeroSection() {
       {/* ══════════════════════════════════════════════════════════════
           MOBILE LAYOUT  (< lg)
       ══════════════════════════════════════════════════════════════ */}
-      <div className="lg:hidden flex flex-col min-h-screen">
+      <div className="lg:hidden flex flex-col min-h-screen pt-16">
 
         {/* ── PHOTO BLOCK (top half on mobile) ── */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex items-end justify-center"
-          style={{ zIndex: 3, height: "52vh", minHeight: "300px", maxHeight: "420px" }}
+          className="relative flex items-end justify-center w-full px-4 overflow-hidden"
+          style={{ zIndex: 3, height: "45vh", minHeight: "260px", maxHeight: "380px" }}
         >
           {/* Portrait image */}
           <img
             src={IMAGES.portrait}
             alt="K. Dilakshan"
             draggable={false}
-            className="relative z-10 select-none object-cover object-top w-auto
+            className="relative z-10 select-none object-cover object-top w-auto max-w-full
                        [mask-image:linear-gradient(to_bottom,black_55%,transparent_100%)]
                        [-webkit-mask-image:linear-gradient(to_bottom,black_55%,transparent_100%)]"
-            style={{ height: "100%", maxHeight: "420px" }}
+            style={{ height: "100%", maxHeight: "380px" }}
           />
 
           {/* Floating badge: UI/UX Designer — top right of photo */}
@@ -101,13 +101,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.0, duration: 0.5, type: "spring" }}
-            className="absolute top-[18%] right-[8%] z-20
-                       flex items-center gap-2 px-3 py-2
+            className="absolute top-[10%] right-2 sm:right-[8%] z-20
+                       flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-2
                        bg-[#111]/90 border border-white/10 rounded-xl
                        shadow-xl backdrop-blur-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-brand-red flex-shrink-0" />
-            <span className="font-mono text-[9px] tracking-[0.18em] text-white/70 uppercase whitespace-nowrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0" />
+            <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.15em] text-white/70 uppercase whitespace-nowrap">
               UI/UX Designer
             </span>
           </motion.div>
@@ -117,13 +117,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.5, type: "spring" }}
-            className="absolute top-[18%] left-[8%] z-20
-                       flex items-center gap-2 px-3 py-2
+            className="absolute top-[10%] left-2 sm:left-[8%] z-20
+                       flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-2
                        bg-[#111]/90 border border-white/10 rounded-xl
                        shadow-xl backdrop-blur-sm"
           >
-            <Briefcase className="h-3 w-3 text-brand-red flex-shrink-0" />
-            <span className="font-mono text-[9px] tracking-[0.18em] text-white/70 uppercase whitespace-nowrap">
+            <Briefcase className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-brand-red flex-shrink-0" />
+            <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.15em] text-white/70 uppercase whitespace-nowrap">
               Open to Work
             </span>
           </motion.div>
@@ -133,12 +133,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.4, duration: 0.5, type: "spring" }}
-            className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-20
-                       flex items-center gap-2 px-4 py-2
+            className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-20
+                       flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2
                        bg-brand-red rounded-xl shadow-xl"
           >
-            <Code2 className="h-3 w-3 text-white/80" />
-            <span className="font-mono text-[9px] tracking-[0.18em] text-white uppercase whitespace-nowrap">
+            <Code2 className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white/80" />
+            <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.15em] text-white uppercase whitespace-nowrap">
               Web Developer
             </span>
           </motion.div>
@@ -149,12 +149,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="flex flex-col gap-5 px-6 pt-6 pb-16 relative z-10"
+          className="flex flex-col gap-4 px-5 pt-4 pb-12 relative z-10 max-w-full overflow-hidden"
         >
           {/* "Hello There!" pill */}
           <div className="flex items-center gap-2 w-fit">
-            <span className="border border-white/20 rounded-full px-4 py-1.5
-                             font-mono text-[10px] tracking-[0.2em] text-white/60 uppercase
+            <span className="border border-white/20 rounded-full px-3.5 py-1
+                             font-mono text-[9px] sm:text-[10px] tracking-[0.2em] text-white/60 uppercase
                              bg-white/[0.04] flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
               Hello There!
@@ -163,58 +163,58 @@ export default function HeroSection() {
 
           {/* Heading */}
           <div className="flex flex-col gap-0">
-            <h1 className="font-signature text-brand-red text-[2.6rem] leading-[1.1]">
+            <h1 className="font-signature text-brand-red text-[2.1rem] sm:text-[2.6rem] leading-[1.1]">
               I'm K. Dilakshan,
             </h1>
-            <h2 className="font-sans font-black text-white text-[1.8rem] leading-[1.05] tracking-[-0.02em]">
+            <h2 className="font-sans font-black text-white text-[1.5rem] sm:text-[1.8rem] leading-[1.05] tracking-[-0.02em]">
               Software Engineer
             </h2>
-            <h2 className="font-sans font-black text-white text-[1.8rem] leading-[1.05] tracking-[-0.02em]">
+            <h2 className="font-sans font-black text-white text-[1.5rem] sm:text-[1.8rem] leading-[1.05] tracking-[-0.02em]">
               based in Sri Lanka.
             </h2>
           </div>
 
           {/* Bio */}
-          <p className="text-white/45 font-sans text-sm font-light leading-relaxed">
+          <p className="text-white/45 font-sans text-xs sm:text-sm font-light leading-relaxed">
             An undergraduate at SLIIT specializing in Information Technology with 1+ years in the field,
             collaborating with various companies and startups.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-3 flex-wrap">
+          <div className="flex gap-2.5 flex-wrap">
             <a
               href="#projects"
-              className="flex items-center gap-2 px-6 py-3
-                         bg-brand-red text-white font-sans font-semibold text-sm
+              className="flex items-center gap-2 px-5 py-2.5
+                         bg-brand-red text-white font-sans font-semibold text-xs sm:text-sm
                          rounded-full hover:bg-red-700 transition-colors duration-300 group"
             >
               View My Work
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
             <a
               href="#"
-              className="flex items-center gap-2 px-6 py-3
-                         border border-white/20 text-white/70 font-sans font-semibold text-sm
+              className="flex items-center gap-2 px-5 py-2.5
+                         border border-white/20 text-white/70 font-sans font-semibold text-xs sm:text-sm
                          rounded-full hover:border-brand-red hover:text-white
                          transition-colors duration-300"
             >
-              <Download className="h-4 w-4" />
+              <Download className="h-3.5 w-3.5" />
               Download CV
             </a>
           </div>
 
           {/* Stats */}
-          <div className="flex items-center gap-6 pt-4 border-t border-white/[0.07]">
+          <div className="flex items-center justify-between sm:justify-start sm:gap-6 pt-3 border-t border-white/[0.07]">
             {[
               { value: "1+", label: "Years Exp." },
               { value: "15+", label: "Projects" },
               { value: "11+", label: "Skills" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col gap-0.5">
-                <span className="font-sans font-black text-white text-xl leading-none tracking-tight">
+                <span className="font-sans font-black text-white text-lg sm:text-xl leading-none tracking-tight">
                   {stat.value}
                 </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/35">
+                <span className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.15em] text-white/35">
                   {stat.label}
                 </span>
               </div>

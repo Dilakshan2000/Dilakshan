@@ -109,12 +109,12 @@ export default function FooterCTA({ onOpenContact }: FooterCTAProps) {
             {/* Contact Item: Email */}
             <a
               href="mailto:dilakshankanagarajan@gmail.com"
-              className="flex items-center gap-4 text-white/50 hover:text-white transition-all group"
+              className="flex items-center gap-3 sm:gap-4 text-white/50 hover:text-white transition-all group overflow-hidden"
             >
-              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20">
+              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20 shrink-0">
                 <Mail className="h-3.5 w-3.5 text-brand-red" />
               </span>
-              <span className="font-mono text-xs tracking-wider">
+              <span className="font-mono text-[10px] sm:text-xs tracking-wider break-all">
                 dilakshankanagarajan@gmail.com
               </span>
             </a>
@@ -124,12 +124,12 @@ export default function FooterCTA({ onOpenContact }: FooterCTAProps) {
               href="https://www.linkedin.com/in/kanagarajan-dilakshan-9984a731a"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 text-white/50 hover:text-white transition-all group"
+              className="flex items-center gap-3 sm:gap-4 text-white/50 hover:text-white transition-all group overflow-hidden"
             >
-              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20">
+              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20 shrink-0">
                 <Globe className="h-3.5 w-3.5 text-brand-red" />
               </span>
-              <span className="font-mono text-xs tracking-wider">
+              <span className="font-mono text-[10px] sm:text-xs tracking-wider break-all">
                 linkedin.com/in/kanagarajan-dilakshan
               </span>
             </a>
@@ -137,22 +137,22 @@ export default function FooterCTA({ onOpenContact }: FooterCTAProps) {
             {/* Contact Item: Phone */}
             <a
               href="tel:+94774085768"
-              className="flex items-center gap-4 text-white/50 hover:text-white transition-all group"
+              className="flex items-center gap-3 sm:gap-4 text-white/50 hover:text-white transition-all group"
             >
-              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20">
+              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] group-hover:border-white/20 shrink-0">
                 <Phone className="h-3.5 w-3.5 text-brand-red" />
               </span>
-              <span className="font-mono text-xs tracking-wider">
+              <span className="font-mono text-[10px] sm:text-xs tracking-wider">
                 +94 77 408 5768
               </span>
             </a>
 
             {/* Contact Item: Location */}
-            <div className="flex items-center gap-4 text-white/40 group">
-              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02]">
+            <div className="flex items-center gap-3 sm:gap-4 text-white/40 group">
+              <span className="p-2 border border-white/10 rounded-sm bg-white/[0.02] shrink-0">
                 <MapPin className="h-3.5 w-3.5 text-brand-red" />
               </span>
-              <span className="font-mono text-xs tracking-wider select-none">
+              <span className="font-mono text-[10px] sm:text-xs tracking-wider select-none">
                 Kurunegala, Sri Lanka
               </span>
             </div>

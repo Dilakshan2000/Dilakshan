@@ -29,13 +29,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: 20 }}
             transition={{ type: "spring", damping: 30, stiffness: 200 }}
-            className="relative bg-[#0a0a0a] border border-white/15 rounded-sm overflow-hidden max-w-4xl w-full z-10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] select-text"
+            className="relative bg-[#0a0a0a] border border-white/15 rounded-sm overflow-hidden max-w-4xl w-full z-10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] select-text my-auto max-h-[85vh] md:max-h-none overflow-y-auto"
           >
             {/* Close Button top right */}
             <button
               onClick={onClose}
               data-cursor="CLOSE"
-              className="absolute top-5 right-5 z-30 p-2 rounded-sm border border-white/10 bg-[#0a0a0a] hover:bg-brand-red hover:border-brand-red text-white transition-all cursor-pointer select-none"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 z-30 p-2 rounded-sm border border-white/10 bg-[#0a0a0a]/80 backdrop-blur-sm hover:bg-brand-red hover:border-brand-red text-white transition-all cursor-pointer select-none"
             >
               <X className="h-4 w-4" />
             </button>
@@ -43,7 +43,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <div className="grid grid-cols-1 md:grid-cols-12">
               
               {/* Left Column: Huge High-quality preview of the project */}
-              <div className="md:col-span-6 relative aspect-[16/11] md:aspect-auto md:min-h-[500px] bg-[#121212] flex items-center justify-center border-r border-white/10">
+              <div className="md:col-span-6 relative aspect-[16/10] md:aspect-auto md:min-h-[500px] bg-[#121212] flex items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
@@ -53,14 +53,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 
                 {/* Visual Accent */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                <div className="absolute bottom-6 left-6 flex items-center gap-2 bg-[#0a0a0a] border border-white/10 px-3.5 py-1.5 rounded-sm text-[8px] font-mono tracking-widest text-white uppercase select-none">
+                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex items-center gap-2 bg-[#0a0a0a] border border-white/10 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-sm text-[8px] font-mono tracking-widest text-white uppercase select-none">
                   <ShieldCheck className="h-3 w-3 text-brand-red animate-pulse" />
                   <span>Verified Concept</span>
                 </div>
               </div>
 
               {/* Right Column: Project details specs and explanation text */}
-              <div className="md:col-span-6 p-8 md:p-10 flex flex-col justify-between">
+              <div className="md:col-span-6 p-5 sm:p-8 md:p-10 flex flex-col justify-between">
                 <div>
                   
                   {/* Category & Index */}

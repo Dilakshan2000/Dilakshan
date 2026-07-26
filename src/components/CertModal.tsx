@@ -47,12 +47,12 @@ export default function CertModal({ cert, onClose }: CertModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: 20 }}
             transition={{ type: "spring", damping: 30, stiffness: 200 }}
-            className="relative bg-[#0a0a0a] border border-white/15 rounded-sm overflow-hidden max-w-3xl w-full z-10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] select-text"
+            className="relative bg-[#0a0a0a] border border-white/15 rounded-sm overflow-hidden max-w-3xl w-full z-10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] select-text my-auto max-h-[85vh] md:max-h-none overflow-y-auto"
           >
             {/* Close button */}
             <button
               onClick={onClose}
-              className="absolute top-5 right-5 z-30 p-2 rounded-sm border border-white/10 bg-[#0a0a0a] hover:bg-brand-red hover:border-brand-red text-white transition-all cursor-pointer select-none"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 z-30 p-2 rounded-sm border border-white/10 bg-[#0a0a0a]/80 backdrop-blur-sm hover:bg-brand-red hover:border-brand-red text-white transition-all cursor-pointer select-none"
             >
               <X className="h-4 w-4" />
             </button>
@@ -60,31 +60,31 @@ export default function CertModal({ cert, onClose }: CertModalProps) {
             <div className="grid grid-cols-1 md:grid-cols-12">
 
               {/* Left: decorative accent panel */}
-              <div className={`md:col-span-5 relative flex flex-col items-center justify-center min-h-[260px] md:min-h-[440px] bg-[#0d0d0d] border-r border-white/10 p-10 gap-6 overflow-hidden`}>
+              <div className={`md:col-span-5 relative flex flex-col items-center justify-center min-h-[180px] sm:min-h-[220px] md:min-h-[440px] bg-[#0d0d0d] border-b md:border-b-0 md:border-r border-white/10 p-6 sm:p-10 gap-4 sm:gap-6 overflow-hidden`}>
                 {/* Radial glow */}
                 <div className={`absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,var(--glow-color),transparent_70%)]`}
                   style={{ "--glow-color": cert.accentColor === "blue" ? "#3b82f6" : cert.accentColor === "purple" ? "#a855f7" : "#34d399" } as React.CSSProperties}
                 />
 
                 {/* Big cert number */}
-                <span className="font-serif font-light text-[120px] leading-none text-white/5 select-none absolute -bottom-4 -right-2">
+                <span className="font-serif font-light text-[80px] sm:text-[120px] leading-none text-white/5 select-none absolute -bottom-4 -right-2">
                   {String(cert.id + 1).padStart(2, "0")}
                 </span>
 
                 {/* Icon ring */}
-                <div className={`relative z-10 w-20 h-20 rounded-full border-2 ${accent.border} ${accent.bg} flex items-center justify-center`}>
-                  <BadgeCheck className={`size-9 ${accent.text}`} />
+                <div className={`relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 ${accent.border} ${accent.bg} flex items-center justify-center`}>
+                  <BadgeCheck className={`size-7 sm:size-9 ${accent.text}`} />
                 </div>
 
                 {/* Verified stamp */}
-                <div className="relative z-10 flex items-center gap-2 bg-[#0a0a0a] border border-white/10 px-3.5 py-1.5 rounded-sm text-[8px] font-mono tracking-widest text-white uppercase select-none">
+                <div className="relative z-10 flex items-center gap-2 bg-[#0a0a0a] border border-white/10 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-sm text-[8px] font-mono tracking-widest text-white uppercase select-none">
                   <ShieldCheck className={`h-3 w-3 ${accent.pulse} animate-pulse`} />
                   <span>Verified Certificate</span>
                 </div>
               </div>
 
               {/* Right: details */}
-              <div className="md:col-span-7 p-8 md:p-10 flex flex-col justify-between gap-6">
+              <div className="md:col-span-7 p-5 sm:p-8 md:p-10 flex flex-col justify-between gap-6">
                 <div className="flex flex-col gap-5">
 
                   {/* Category label */}

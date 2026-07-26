@@ -168,7 +168,7 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Links (Staggered Translate revealed - Item 3) */}
-            <nav className="flex flex-col gap-6 md:gap-8 text-left max-w-2xl w-full z-10 relative pl-4 md:pl-12 border-l border-white/10">
+            <nav className="flex flex-col gap-4 sm:gap-6 md:gap-8 text-left max-w-2xl w-full z-10 relative pl-3 sm:pl-6 md:pl-12 border-l border-white/10 my-auto">
               {menuLinks.map((link, index) => (
                 <div key={link.href} className="overflow-hidden group/link">
                   <motion.div
@@ -179,16 +179,16 @@ export default function Navbar() {
                       delay: 0.15 + index * 0.06,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="flex items-baseline gap-4 md:gap-6"
+                    className="flex items-baseline gap-3 sm:gap-4 md:gap-6"
                   >
-                    <span className="font-mono text-[10px] text-brand-red/60 group-hover/link:text-brand-red transition-colors duration-300 select-none">
+                    <span className="font-mono text-[9px] sm:text-[10px] text-brand-red/60 group-hover/link:text-brand-red transition-colors duration-300 select-none">
                       {link.number}
                     </span>
                     
                     <a
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="font-serif text-3xl sm:text-5xl md:text-6xl font-light tracking-tight text-white/70 group-hover/link:text-white group-hover/link:translate-x-2 transition-all duration-300 italic inline-block"
+                      className="font-serif text-2xl sm:text-4xl md:text-6xl font-light tracking-tight text-white/70 group-hover/link:text-white group-hover/link:translate-x-2 transition-all duration-300 italic inline-block"
                     >
                       {link.label}
                     </a>

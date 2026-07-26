@@ -70,32 +70,30 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="relative flex items-center justify-center"
-              style={{ minHeight: "520px" }}
+              className="relative flex items-center justify-center min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] w-full overflow-hidden sm:overflow-visible"
             >
               {/* Large red circle blob behind image */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                           w-[320px] h-[320px] rounded-full bg-brand-red/80"
+                           w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-full bg-brand-red/80"
                 style={{ zIndex: 1 }}
               />
               {/* Inner ring */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                           w-[360px] h-[360px] rounded-full border border-brand-red/20"
+                           w-[270px] h-[270px] sm:w-[360px] sm:h-[360px] rounded-full border border-brand-red/20"
                 style={{ zIndex: 1 }}
               />
               {/* Outer dashed ring */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                           w-[420px] h-[420px] rounded-full border border-dashed border-white/10"
+                           w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] max-w-[95vw] max-h-[95vw] rounded-full border border-dashed border-white/10"
                 style={{ zIndex: 1 }}
               />
 
               {/* Portrait image */}
               <div
-                className="relative z-10 flex items-end justify-center"
-                style={{ height: "480px" }}
+                className="relative z-10 flex items-end justify-center h-[360px] sm:h-[440px] lg:h-[480px]"
               >
                 <img
                   src={IMAGES.portrait}
@@ -115,15 +113,15 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5, type: "spring", stiffness: 120 }}
-                className="absolute top-[12%] right-[8%] z-20
-                           w-28 h-28 rounded-full bg-[#111]/95
+                className="absolute top-[8%] right-[2%] sm:right-[6%] z-20
+                           w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full bg-[#111]/95
                            border border-white/10 shadow-xl backdrop-blur-sm
-                           flex flex-col items-center justify-center gap-1"
+                           flex flex-col items-center justify-center gap-0.5 sm:gap-1"
               >
-                <span className="font-sans font-black text-white text-2xl leading-none tracking-tight">
+                <span className="font-sans font-black text-white text-lg sm:text-2xl leading-none tracking-tight">
                   1+
                 </span>
-                <span className="font-mono text-[8px] tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-2">
+                <span className="font-mono text-[7px] sm:text-[8px] tracking-[0.12em] sm:tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-1 sm:px-2">
                   Years of{"\n"}Experience
                 </span>
               </motion.div>
@@ -134,15 +132,15 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.55, duration: 0.5, type: "spring", stiffness: 120 }}
-                className="absolute top-[40%] left-[0%] z-20
-                           w-28 h-28 rounded-full bg-[#111]/95
+                className="absolute top-[38%] left-[2%] sm:left-[2%] z-20
+                           w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full bg-[#111]/95
                            border border-white/10 shadow-xl backdrop-blur-sm
-                           flex flex-col items-center justify-center gap-1"
+                           flex flex-col items-center justify-center gap-0.5 sm:gap-1"
               >
-                <span className="font-sans font-black text-white text-2xl leading-none tracking-tight">
+                <span className="font-sans font-black text-white text-lg sm:text-2xl leading-none tracking-tight">
                   15+
                 </span>
-                <span className="font-mono text-[8px] tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-2">
+                <span className="font-mono text-[7px] sm:text-[8px] tracking-[0.12em] sm:tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-1 sm:px-2">
                   Projects{"\n"}Completed
                 </span>
               </motion.div>
@@ -153,16 +151,16 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7, duration: 0.5, type: "spring", stiffness: 120 }}
-                className="absolute bottom-[4%] left-1/2 -translate-x-1/2 z-20
-                           w-28 h-28 rounded-full bg-[#111]/95
+                className="absolute bottom-[2%] left-1/2 -translate-x-1/2 z-20
+                           w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full bg-[#111]/95
                            border border-white/10 shadow-xl backdrop-blur-sm
-                           flex flex-col items-center justify-center gap-1"
+                           flex flex-col items-center justify-center gap-0.5 sm:gap-1"
               >
-                <span className="font-sans font-black text-white text-2xl leading-none tracking-tight">
+                <span className="font-sans font-black text-white text-lg sm:text-2xl leading-none tracking-tight">
                   25+
                 </span>
-                <span className="font-mono text-[8px] tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-2">
-                  Skills &amp;{"\n"}Technologies
+                <span className="font-mono text-[7px] sm:text-[8px] tracking-[0.12em] sm:tracking-[0.15em] text-white/50 uppercase text-center leading-snug px-1 sm:px-2">
+                  Skills &amp;{"\n"}Tech
                 </span>
               </motion.div>
             </motion.div>

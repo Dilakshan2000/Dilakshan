@@ -66,7 +66,7 @@ export const TidalCursor = () => {
     <canvas
       ref={canvasRef}
       className={cn(
-        "fixed inset-0 w-full h-full pointer-events-none z-[9999]"
+        "fixed inset-0 w-full h-full pointer-events-none z-[9999] hidden md:block"
       )}
     />
   );

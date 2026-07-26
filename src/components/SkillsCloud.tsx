@@ -95,10 +95,10 @@ export default function SkillsCloud() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center min-h-[420px]"
+            className="relative flex items-center justify-center min-h-[300px] sm:min-h-[420px] max-w-full"
           >
             {/* Thin ring frame */}
-            <div className="absolute inset-4 rounded-full border border-white/5 pointer-events-none" />
+            <div className="absolute inset-2 sm:inset-4 rounded-full border border-white/5 pointer-events-none" />
             <IconCloud iconSlugs={slugs} />
           </motion.div>
 

@@ -94,15 +94,21 @@ export const FloatingCardGallery: React.FC<FloatingCardGalleryProps> = ({
                 transformStyle: "preserve-3d",
               }}
               onClick={() => {
-                setActiveIndex(activeIndex === index ? null : index);
-                onSelectCard?.(card);
+                if (onSelectCard) {
+                  onSelectCard(card);
+                } else {
+                  setActiveIndex(activeIndex === index ? null : index);
+                }
               }}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  setActiveIndex(activeIndex === index ? null : index);
-                  onSelectCard?.(card);
+                  if (onSelectCard) {
+                    onSelectCard(card);
+                  } else {
+                    setActiveIndex(activeIndex === index ? null : index);
+                  }
                 }
               }}
             >
